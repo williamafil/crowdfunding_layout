@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&display=swap");
+/* font-family: 'Baloo Tamma 2', cursive;  */
+/* font-family: 'Noto Sans TC', sans-serif; */
+
+:root {
+  --white: #fff;
+  --main-color: #ffdf65;
+  --gray-100: #f8f9fa;
+  --gray-200: #eeeeee;
+
+  --warm-gray-lightest: #e5e5e5;
+  --warm-gray-light: #e8e8db;
+  --warm-gray-dark: #858377;
+
+  --text-primary: #53524f;
+  --text-secondary: #494846;
+  --text-dark: #373a3c;
+  --text-other: #636057;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--text-primary);
+}
+
+/* 
+    Alignments
+*/
+.row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/* 
+    Image
+*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 
+  Button
+*/
+button {
+  border-radius: 1.565rem;
+  height: 44px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  line-height: 1.7;
+  color: var(--text-other);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.5em;
+}
+
+.solid-btn {
+  border: 0;
+  background-color: var(--main-color);
+}
+
+.bordered-btn {
+  border: 2px solid var(--warm-gray-dark);
+}
+
+/*
+    Container
+*/
+
+.container {
+  width: 100%;
+  max-width: 1115px;
+  margin: 0 auto;
+  padding: 0 0.75em;
+}
+
+.container-nav {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-hero {
+  padding-top: 1em;
+}
+
+/*
+    Header
+*/
+
+header {
+  /* padding: 0.7em 0; */
+  border-bottom: 3px solid var(--main-color);
+}
+
+.logo {
+  height: 40px;
+}
+
+.menu-icon {
+  width: 32px;
+  height: 32px;
+  color: #000;
+}
+
+/* 
+  Main
+*/
+
+main {
+  background-color: var(--gray-100);
+}
+
+.title-wrapper {
+}
+
+.product-tag {
+  background-color: var(--warm-gray-dark);
+  color: var(--white);
+  display: inline;
+  padding: 0.15em 1em 0.3em 1em;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  display: inline;
+}
+
+.product-title {
+  /* 
+  font-family: NotoSansCJKtc-Bold;
+  font-size: 24px;
+  color: #53524F;
+  letter-spacing: 2.25px;
+  */
+  margin-top: 0.5em;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+  letter-spacing: 0.14rem;
+}
+
+.info-wrapper {
+  margin-top: 0.75em;
+  color: var(--text-other);
+}
+
+.funding-info {
+  margin-top: 1em;
+}
+
+.target-funding {
+  /*
+  font-family: NotoSansCJKtc-Regular;
+  font-size: 14px;
+  color: #636057;
+  */
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.current-funding {
+  /* 
+  font-family: BalooTamma2-SemiBold;
+  font-size: 32px;
+  color: #53524F;
+  */
+  margin-top: 0.34em;
+  font-size: 2rem;
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: 600;
+  line-height: 3.5rem;
+}
+
+.progress-bar {
+  background-color: var(--gray-200);
+  height: 1rem;
+  border-radius: 0.5rem;
+
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.progress {
+  text-align: center;
+  width: 41%;
+  height: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--main-color);
+  color: var(--warm-gray-dark);
+  position: relative;
+}
+
+.progress span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20%;
+  bottom: 80%;
+}
+
+.funders-count {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+article.count {
+  width: 50%;
+  color: var(--text-other);
+}
+
+article.count h3 {
+  font-size: 0.875rem;
+}
+
+article.count p {
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+ul.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+ul.icons li {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+}
+.icons p {
+  margin-left: 0.5em;
+  font-size: 0.75rem;
+  color: var(--text-other);
+}
+
+.card {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  padding: 1em;
+  border-left: 4px solid var(--main-color);
+}
+
+.card h4,
+.card p {
+  font-size: 0.875rem;
+  color: var(--text-other);
+  text-align: justify;
+  line-height: 1.25rem;
+}
+
+/*
+  CTA Buttons
+*/
+.btn-wrapper {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta-btn {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.follow-btn,
+.share-btn {
+  width: 49%;
+  border: 3px solid var(--warm-gray-dark);
+  background-color: transparent;
+}
+
+/* 
+    case-nav
+*/
+nav.case-nav {
+  margin-bottom: 2em;
+}
+
+nav.case-nav ul {
+  line-height: 1.25rem;
+  letter-spacing: 0.11rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--warm-gray-light);
+  border-bottom: 1px solid var(--warm-gray-light);
+}
+nav.case-nav li {
+}
+
+nav.case-nav .case-nav-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: var(--text-other);
+  padding: 1em;
+}
+
+nav.case-nav .case-nav-link:hover {
+  padding-bottom: 0.8em;
+  border-bottom: 3px solid var(--main-color);
+}
+
+nav.case-nav .active {
+  font-weight: bold;
+  padding-bottom: 0.8em;
+  border-bottom: 3px solid var(--main-color);
+}
+
+section.product-articles {
+}
+
+/* 
+    Articles
+*/
+article.article-card {
+}
+
+article.article-card h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.1rem;
+  line-height: 1.8125rem;
+  border-left: 4px solid var(--main-color);
+  padding-left: 1em;
+}
+
+article.article-card p {
+  padding: 0.5em 0;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.2rem;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.company-info {
+  padding: 1em;
+  border-radius: 0.5rem;
+  border: 1px solid var(--warm-gray-lightest);
+}
+
+.company-info .img-wrapper {
+  width: 70px;
+  margin-right: 1em;
+}
+
+.company-info .company-avatar {
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+}
+
+.company-info .company-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.company-title h3 {
+  font-size: 1.125rem;
+  letter-spacing: 0.1125rem;
+  text-align: left;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.company-title p {
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  line-height: 1.25rem;
+  letter-spacing: 0.05rem;
+}
+
+.company-title b {
+  font-weight: 600;
+}
+
+.marketing-btns {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media {
+  display: flex;
+}
+
+.round-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--warm-gray-dark);
+  border-radius: 50%;
+
+  margin-right: 0.5rem;
+}
+
+.round-btn svg {
+  color: var(--white);
+}
+
+.facebook svg {
+  width: auto;
+  height: 50%;
+}
+
+.youtube svg {
+  width: auto;
+  height: 40%;
+}
+
+.contact-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.875rem;
+  border: 1px solid var(--warm-gray-dark);
+  font-size: 0.75rem;
+  font-weight: 200;
+  color: var(--warm-gray-dark);
+  line-height: 1.1rem;
+  padding: 0.5em 1em;
+  background-color: transparent;
+}
+
+.contact-btn svg {
+  width: 15px;
+}
+
+.choose-your-plan {
+  margin-top: 2rem;
+  height: 40px;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--main-color);
+  border-right: 4px solid var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+article.plan-card {
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--warm-gray-light);
+}
+
+article.plan-card .img-wrapper {
+  object-fit: cover;
+}
+
+article.plan-card .plan-content {
+  padding: 1rem;
+}
+
+.limited-offer {
+  border-bottom: 1px solid var(--warm-gray-light);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1em;
+}
+
+.limited-offer > h4 {
+  font-size: 0.875rem;
+  color: var(--text-other);
+  letter-spacing: 0.125rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+}
+
+.limited-offer > p {
+  font-size: 0.875rem;
+  color: var(--text-other);
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.plan-content h3 {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.125rem;
+  line-height: 1.69rem;
+  font-weight: 500;
+}
+
+.plan-content .price {
+  font-family: "Baloo Tamma 2", cursive;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  letter-spacing: 0;
+  line-height: 2.56rem;
+  font-weight: 600;
+}
+
+.tags {
+  display: flex;
+}
+
+.tags .funded-times {
+  background-color: var(--warm-gray-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--warm-gray-dark);
+  line-height: 1.125rem;
+  margin-right: 0.5rem;
+
+  display: inline;
+  padding: 0.18em 1em 0.2em 1em;
+  border-radius: 0.25rem;
+}
+
+.tags .limited-quantity {
+  background-color: var(--warm-gray-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.125rem;
+  margin-right: 0.5rem;
+
+  display: inline;
+  padding: 0.16em 1em 0.22em 1em;
+  border-radius: 0.25rem;
+}
+
+.tags span {
+  color: var(--main-color);
+}
+
+.plan-content .desc {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--warm-gray-dark);
+  letter-spacing: 0.04rem;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.fund-btn {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--text-other);
+  line-height: 1.31rem;
+  letter-spacing: 0.07rem;
+}
+
+.funding-form-mobile {
+  margin-top: 2rem;
+}
+
+.funding-form-mobile .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.icon img {
+  width: 43px;
+  height: 43px;
+}
+
+.form-heading .form-title {
+}
+
+.yellow-line {
+  position: relative;
+  height: 3px;
+  background-color: var(--main-color);
+  width: 100%;
+  margin-top: 1.375rem;
+  text-align: center;
+}
+
+.yellow-line p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.5rem;
+}
+
+.yellow-line span {
+  padding: 0.1em 1em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--white);
+}
+
+.funding-form-mobile form {
+  margin-top: 2em;
+}
+
+.funding-form-mobile label,
+.funding-form-mobile input,
+.funding-form-mobile select {
+  display: block;
+}
+
+.funding-form-mobile label {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-dark);
+  line-height: 1.25rem;
+}
+
+.funding-form-mobile input,
+.funding-form-mobile select {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 38px;
+  padding: 0 1em;
+  font-size: 0.875rem;
+  color: #999999;
+  line-height: 1.25rem;
+  border: 0;
+  background-color: #f7f7f7;
+}
+
+.funding-form-mobile button {
+  margin-bottom: 3em;
+}
+
+footer {
+  padding: 1em 0;
+  background-color: var(--text-secondary);
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: var(--white);
+  letter-spacing: 0.1rem;
+  line-height: 1.25rem;
+}
