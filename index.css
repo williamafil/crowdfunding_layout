@@ -42,10 +42,16 @@ body {
   justify-content: space-between;
 }
 
+/*
+    Link
+*/
+a:focus-visible {
+  outline: none;
+}
+
 /* 
     Image
 */
-
 img {
   max-width: 100%;
   height: auto;
