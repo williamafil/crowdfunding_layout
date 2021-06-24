@@ -114,7 +114,6 @@ button svg {
 */
 
 header {
-  /* padding: 0.7em 0; */
   border-bottom: 3px solid var(--main-color);
   position: relative;
   z-index: 1;
@@ -138,18 +137,9 @@ header {
   right: -700px;
   top: 67px;
   border-bottom: 4px solid rgba(200, 200, 200, 0.2);
-  /* display: none;
-  height: 100vh;
-  width: 300px;
-  background-color: var(--gray-100);
-  right: -300px;
-  position: absolute;
-  top: 67px;
-  border-left: 4px solid rgba(200, 200, 200, 0.2); */
 }
 
 #toggle-menu:checked + .side-menu {
-  
   display: block;
   animation: slide-in 0.5s forwards;
   -webkit-animation: slide-in 0.5s forwards;
@@ -290,12 +280,6 @@ main {
 }
 
 .product-title {
-  /* 
-  font-family: NotoSansCJKtc-Bold;
-  font-size: 24px;
-  color: #53524F;
-  letter-spacing: 2.25px;
-  */
   margin-top: 0.5em;
   font-size: 1.5rem;
   font-weight: 600;
@@ -563,12 +547,6 @@ nav.case-nav .active {
   border-bottom: 3px solid var(--main-color);
 }
 
-/* {
-  font-weight: bold;
-  padding-bottom: 0.8em;
-  border-bottom: 3px solid var(--main-color);
-} */
-
 /* 
     two-col: Articles & Plans
 */
@@ -576,13 +554,90 @@ nav.case-nav .active {
 section.product-articles {
 }
 
+/*
+    PROGRESS
+*/
 
+.progress-card {
+  display: flex;
+  margin-bottom: 1em;
+  border-radius: 0.5rem;
+  border: 1px solid var(--warm-gray-lightest);
+}
+
+/* .progress-card:last-child {
+  margin-bottom: 3em;
+} */
+
+.progress-card .img-wrapper {
+  width: 38.5%;
+}
+
+.progress-card .img-wrapper > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.progress-card .card-content {
+  width: 61.5%;
+  padding: 1em;
+}
+
+.card-content h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #494846;
+  letter-spacing: 0.035rem;
+  line-height: 1.5rem;
+}
+
+.card-content > p {
+  font-family: "Baloo Tamma 2", cursive;
+  font-size: 0.875rem;
+  color: var(--warm-gray-dark);
+  letter-spacing: 0.03rem;
+  line-height: 1.5rem;
+}
+
+.card-content > .progress-paragraph {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--warm-gray-dark);
+  letter-spacing: 0.044rem;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 680px) {
+  .card-content > .progress-paragraph {
+    display: block;
+  }
+}
+
+.card-content > span {
+  font-family: "Baloo Tamma 2", cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--hover);
+  letter-spacing: 0.05rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+
+/*
+    MESSAGE
+*/
 .message-card {
   margin-bottom: 1em;
   padding: 1em;
   border-radius: 0.5rem;
   border: 1px solid var(--warm-gray-lightest);
-} 
+}
 
 .message-card:last-child {
   margin-bottom: 2em;
@@ -663,13 +718,93 @@ section.product-articles {
   letter-spacing: 0.04rem;
   line-height: 1.25rem;
   text-align: justify;
-
 }
+
+/* 
+    ACCORDION FAQ
+*/
+.accordion-card {
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 0.5rem;
+  border: 1px solid var(--warm-gray-lightest);
+}
+
+.active-accordion {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.12) 0px 2px 16px 0px;
+}
+
+.accordion-card .arrow-wrapper {
+  display: inline-block;
+  float: right;
+}
+
+.arrow-wrapper > svg {
+  width: 20px;
+}
+
+.arrow-wrapper .up {
+  display: none;
+}
+
+.accordion-card > input[type="radio"] {
+  display: none;
+}
+
+.accordion-card label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  background-color: #fff;
+}
+
+.accordion-card span {
+  font-family: "Baloo Tamma 2", cursive;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-other);
+  letter-spacing: 0.044rem;
+  line-height: 1.5rem;
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 0.25rem;
+  padding: 0.3em 0.4em 0 0.4em;
+  margin-right: 1rem;
+}
+
+.accordion-card .accordion-content {
+  display: none;
+}
+
+.accordion-card input:checked ~ .accordion-content {
+  display: block;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--warm-gray-lightest);
+
+  font-size: 1rem;
+  color: var(--warm-gray-dark);
+  letter-spacing: 0.044rem;
+  line-height: 1.6875rem;
+  text-align: justify;
+}
+
+.accordion-card input:checked ~ .arrow-wrapper > .up {
+  display: inline-block;
+}
+
+.accordion-card input:checked ~ .arrow-wrapper > .down {
+  display: none;
+}
+
 /*  ========================================= */
 
 @media (min-width: 680px) {
   .section-row {
- 7   width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -711,6 +846,7 @@ article.article-card p {
 }
 
 .company-info {
+  margin-top: 2em;
   padding: 1em;
   border-radius: 0.5rem;
   border: 1px solid var(--warm-gray-lightest);
