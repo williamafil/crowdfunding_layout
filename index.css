@@ -215,6 +215,11 @@ header {
   color: var(--white);
 }
 
+.login-btn:hover,
+.reg-btn:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 680px) {
   .nav-mobile {
     display: none;
@@ -493,6 +498,10 @@ ul.icons li {
   width: 100%;
 }
 
+.cta-btn:hover {
+  cursor: pointer;
+}
+
 .follow-btn,
 .share-btn {
   width: 49%;
@@ -505,6 +514,8 @@ ul.icons li {
   background-color: var(--main-color);
   border: 3px solid var(--main-color);
   color: var(--warm-gray-dark);
+
+  cursor: pointer;
 }
 
 .follow-btn:hover svg,
@@ -933,6 +944,11 @@ article.article-card p {
   height: 40%;
 }
 
+.facebook:hover,
+.youtube:hover {
+  cursor: pointer;
+}
+
 .contact-btn {
   display: flex;
   justify-content: space-between;
@@ -949,6 +965,10 @@ article.article-card p {
 
 .contact-btn svg {
   width: 15px;
+}
+
+.contact-btn:hover {
+  cursor: pointer;
 }
 
 .choose-your-plan {
@@ -1071,6 +1091,10 @@ article.plan-card .plan-content {
   color: var(--text-other);
   line-height: 1.31rem;
   letter-spacing: 0.07rem;
+}
+
+.fund-btn:hover {
+  cursor: pointer;
 }
 
 /*
